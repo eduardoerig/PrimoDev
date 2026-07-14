@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 
 const socios = [
   { nome: 'Eduardo', foto: '/eduardo-web.jpg', cargo: 'Cofundador & Desenvolvedor' },
@@ -9,10 +9,11 @@ const socios = [
 export default function Team() {
   const reduzir = useReducedMotion()
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: bruto } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
   })
+  const scrollYProgress = useSpring(bruto, { stiffness: 140, damping: 30, mass: 0.25 })
   // as fotos flutuam em profundidades diferentes conforme o scroll passa
   // amplitude proporcional aos cards compactos
   const parallax = [

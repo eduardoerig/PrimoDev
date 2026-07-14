@@ -150,7 +150,7 @@ export default function LeadForm() {
                       type="button"
                       aria-pressed={ativo}
                       onClick={() => setDados({ ...dados, servico: ativo ? '' : t })}
-                      className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition sm:px-4 sm:py-2 sm:text-sm ${
                         ativo
                           ? 'border-azul bg-azul text-white'
                           : 'border-white/15 text-neblina hover:border-ciano/50 hover:text-gelo'
@@ -179,19 +179,21 @@ export default function LeadForm() {
               )}
             </Campo>
 
-            <div className="flex flex-wrap gap-3 pt-1">
+            <div className="flex gap-2 pt-1 sm:gap-3">
               <button
                 type="submit"
-                className="flex-1 rounded-full bg-azul px-6 py-3.5 font-semibold text-white shadow-lg shadow-azul/30 transition hover:-translate-y-0.5 hover:bg-azul-claro sm:flex-none"
+                className="flex-1 whitespace-nowrap rounded-full bg-azul px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-azul/30 transition hover:-translate-y-0.5 hover:bg-azul-claro sm:flex-none sm:px-6 sm:py-3.5 sm:text-base"
               >
-                Enviar pelo WhatsApp
+                <span className="sm:hidden">WhatsApp</span>
+                <span className="hidden sm:inline">Enviar pelo WhatsApp</span>
               </button>
               <button
                 type="button"
                 onClick={enviarEmail}
-                className="rounded-full border border-white/15 px-6 py-3.5 font-semibold text-gelo transition hover:border-ciano/50"
+                className="flex-1 whitespace-nowrap rounded-full border border-white/15 px-4 py-2.5 text-sm font-semibold text-gelo transition hover:border-ciano/50 sm:flex-none sm:px-6 sm:py-3.5 sm:text-base"
               >
-                Enviar por e-mail
+                <span className="sm:hidden">E-mail</span>
+                <span className="hidden sm:inline">Enviar por e-mail</span>
               </button>
             </div>
             <p className="text-xs text-neblina/70">

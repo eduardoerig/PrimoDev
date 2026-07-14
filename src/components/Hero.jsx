@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
+import { motion, useScroll, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 
 /* Abertura em dois palcos SEPARADOS, um após o outro — sem camadas sobrepostas.
    Palco 1: marca + título gigante; sai de cena por completo antes de acabar.
@@ -160,7 +160,10 @@ function FundoHero() {
    trajetórias verticais opostas para não colidir no centro. */
 function PalcoHero() {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
+  const { scrollYProgress: bruto } = useScroll({ target: ref, offset: ['start start', 'end end'] })
+  // no mobile o scroll chega em saltos grandes (momentum); o spring interpola
+  // entre eles para o palco não andar aos trancos
+  const scrollYProgress = useSpring(bruto, { stiffness: 140, damping: 30, mass: 0.25 })
   const [terminalAtivo, setTerminalAtivo] = useState(false)
 
   useEffect(() => {
