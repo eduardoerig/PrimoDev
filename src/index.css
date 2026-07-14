@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-noite: #0f172a;
+  --color-noite-2: #0b1222;
+  --color-noite-3: #111c33;
+  --color-azul: #2563eb;
+  --color-azul-claro: #3b82f6;
+  --color-ciano: #06b6d4;
+  --color-amarelo: #facc15;
+  --color-gelo: #e2e8f0;
+  --color-neblina: #94a3b8;
+
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-noite);
+  color: var(--color-gelo);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-ciano) 40%, transparent);
+  color: #fff;
+}
+
+/* fundo com malha de pontos sutil, como um blueprint */
+.bg-blueprint {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(148, 163, 184, 0.13) 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
+
+/* brilho ambiente do hero */
+.glow-ciano {
+  background: radial-gradient(
+    ellipse 60% 50% at 70% 20%,
+    rgba(6, 182, 212, 0.14),
+    transparent 70%
+  );
+}
+
+.glow-azul {
+  background: radial-gradient(
+    ellipse 50% 40% at 15% 80%,
+    rgba(37, 99, 235, 0.16),
+    transparent 70%
+  );
+}
+
+/* cartão de vidro — sem backdrop-filter: elementos animados por frame
+   com filtro de fundo causam flicker de compositing no Chrome/Windows */
+.glass {
+  background: linear-gradient(
+    160deg,
+    rgba(30, 41, 59, 0.78),
+    rgba(15, 23, 42, 0.88)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+/* hover sem transform: o Framer é o único dono do transform destes elementos */
+.glass-hover {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-hover:hover {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 20px 40px -20px rgba(6, 182, 212, 0.25);
+}
+
+/* cursor do terminal */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* flutuação suave dos ícones 3D */
+.float-3d {
+  animation: float3d 5s ease-in-out infinite;
+}
+@keyframes float3d {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-amarelo);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .float-3d,
+  .cursor-blink {
+    animation: none;
+  }
+}
