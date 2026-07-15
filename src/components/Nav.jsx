@@ -35,9 +35,8 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#topo" className="font-display text-xl font-bold tracking-tight">
-          Primo<span className="bg-gradient-to-r from-azul-claro to-ciano bg-clip-text text-transparent">Dev</span>
-          <span className="text-amarelo">.</span>
+        <a href="#topo" aria-label="PrimoDev — início" className="flex items-center">
+          <img src="/marca/logo-horizontal.svg" alt="PrimoDev" className="h-7 w-auto" />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

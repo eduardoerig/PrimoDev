@@ -83,10 +83,7 @@ function Terminal({ ativo }) {
 /* blocos de copy compartilhados: uma única fonte para palcos e reduced-motion */
 function Marca({ className = '' }) {
   return (
-    <p className={`font-display font-bold tracking-tight ${className}`}>
-      Primo<span className="bg-gradient-to-r from-azul-claro to-ciano bg-clip-text text-transparent">Dev</span>
-      <span className="text-amarelo">.</span>
-    </p>
+    <img src="/marca/logo-horizontal.svg" alt="PrimoDev" className={`w-auto ${className}`} />
   )
 }
 
@@ -211,7 +208,7 @@ function PalcoHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Marca className="mb-6 text-2xl md:text-3xl" />
+            <Marca className="mb-6 h-8 md:h-11" />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -270,7 +267,7 @@ export default function Hero() {
         <div className="glow-ciano pointer-events-none absolute inset-0" />
         <div className="glow-azul pointer-events-none absolute inset-0" />
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-8 px-5 py-28 text-center">
-          <Marca className="text-2xl" />
+          <Marca className="h-8" />
           <h1 className="font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-7xl">
             <Titulo />
           </h1>
