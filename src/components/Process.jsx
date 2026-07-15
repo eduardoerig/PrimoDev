@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring, useReducedMotion } from 'framer-motion'
    sendo traçado na frente do visitante. Números = ordem real do trabalho. */
 
 const passos = [
-  { numero: '01', titulo: 'Conversa', descricao: '30 minutos para entender seu problema. Grátis.' },
+  { numero: '01', titulo: 'Conversa', descricao: '30 minutos para entender sua dor. Grátis.' },
   { numero: '02', titulo: 'Proposta', descricao: 'Escopo, prazo e preço fechados por escrito.' },
   { numero: '03', titulo: 'Construção', descricao: 'Entregas semanais. Você acompanha tudo.' },
   { numero: '04', titulo: 'No ar', descricao: 'Projeto entregue. E a gente continua por perto.' },

@@ -6,7 +6,6 @@ export default function Footer() {
           Primo<span className="bg-gradient-to-r from-azul-claro to-ciano bg-clip-text text-transparent">Dev</span>
           <span className="text-amarelo">.</span>
         </p>
-        <p className="font-mono text-xs">software sob medida, de primo para primo</p>
         <p>© {new Date().getFullYear()} PrimoDev</p>
       </div>
     </footer>

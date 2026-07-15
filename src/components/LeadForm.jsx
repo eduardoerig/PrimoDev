@@ -204,7 +204,7 @@ export default function LeadForm() {
           {/* resumo vivo: o cliente vê a "ordem de serviço" se formando */}
           <aside className="glass hidden h-fit rounded-2xl p-6 md:p-8 lg:sticky lg:top-24 lg:block">
             <div className="flex items-center justify-between">
-              <p className="font-mono text-xs text-ciano">resumo-da-solicitacao.txt</p>
+              <p className="font-mono text-xs text-ciano">solicitacao.txt</p>
               <button
                 type="button"
                 onClick={copiar}
