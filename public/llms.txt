@@ -1,0 +1,26 @@
+# PrimoDev
+
+> Estúdio de desenvolvimento de software sob medida para pequenas e médias empresas. Criamos sites, sistemas web e automações feitos para a realidade de cada negócio — sem template genérico. O cliente fala direto com quem programa.
+
+## Sobre
+
+- Modelo: estúdio de desenvolvimento com dois sócios desenvolvedores.
+- Atendimento próximo, prazos claros e comunicação direta com quem programa.
+- Foco em soluções que economizam tempo, reduzem trabalho manual e ajudam a vender mais.
+
+## Serviços
+
+- Sites institucionais e landing pages.
+- Sistemas web de gestão sob medida.
+- Automações de processos e integrações entre ferramentas.
+- Manutenção e evolução contínua de projetos.
+
+## Contato
+
+- Site: https://primodev.vercel.app/
+- WhatsApp: https://wa.me/5545999851160
+
+## Links
+
+- [Página principal](https://primodev.vercel.app/): apresentação, serviços, portfólio e formulário de contato.
+- [Sitemap](https://primodev.vercel.app/sitemap.xml): mapa de URLs do site.
