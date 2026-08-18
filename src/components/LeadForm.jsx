@@ -71,6 +71,12 @@ export default function LeadForm() {
   const enviarWhatsApp = (e) => {
     e.preventDefault()
     if (!validar()) return
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        event_category: 'contato',
+        event_label: 'lead_form',
+      })
+    }
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(resumo)}`, '_blank')
   }
 
