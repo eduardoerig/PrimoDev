@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Nav from './components/Nav'
 import ProgressoScroll from './components/ProgressoScroll'
 import Hero from './components/Hero'
@@ -24,6 +25,7 @@ export default function App() {
         <LeadForm />
       </main>
       <Footer />
+      <Analytics />
     </>
   )
 }
